@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Website</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #000000;
+    }
+
+    .container {
+        height: 40vh;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: 5px solid white;
+        border-right: 5px solid rgb(109, 108, 108);
+        border-bottom: 10px solid rgb(109, 108, 108);
+        border-radius: 15px;
+        color: white;
+        padding: 20px;
+        box-shadow: 8px 8px 25px rgb(207, 47, 47),
+                    8px 8px rgb(253, 254, 255)
+    }
+
+    .container>h1 {
+        font-family: monospace;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Just chill brother after a hard day</h1>
+        <button>Tell a Joke</button>
+        <p id="joke">Just Laugh</p>
+    </div>
+</body>
+<script>
+    const joke = document.getElementById('joke')
+    const btn = document.querySelector('button')
+    let array = [
+        {
+            "category": "Dark",
+            "type": "single",
+            "joke": "I didn't vaccinate my 10 kids and the one that survived is fine!",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 96,
+            "safe": false,
+            "lang": "en"
+        },
+        {
+            "category": "Dark",
+            "type": "single",
+            "joke": "Nowadays people are so sensitive, you can't even say \"black paint\" anymore.\nInstead, you have to say \"Jamal, please paint the fence\".",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": true,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 133,
+            "safe": false,
+            "lang": "en"
+        },
+        {
+            "category": "Dark",
+            "type": "single",
+            "joke": "Doctor: \"I have some news about your baby.\"\nParents: \"Don't tell us the gender, we want to keep it a surprise.\"\nDoctor: \"Oh I get it, you're those type of people. Okay, well IT is not breathing.\"",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 138,
+            "safe": false,
+            "lang": "en"
+        },
+        {
+            "category": "Dark",
+            "type": "single",
+            "joke": "My ex had an accident. I told the paramedics the wrong blood type for her. She'll finally experience what rejection is really like.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 152,
+            "safe": false,
+            "lang": "en"
+        },
+        {
+            "category": "Dark",
+            "type": "single",
+            "joke": "My little daughter came to me all excited, saying \"Daddy! Daddy! Guess how old I'll be in June!\"\n\"Oh I don't know princess, why don't you tell me?\" I said. She gave me a huge smile and held up four fingers.\nIt's now three hours later, police have joined in and she still won't say where she got them.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 165,
+            "safe": false,
+            "lang": "en"
+        },
+        {
+            "category": "Dark",
+            "type": "single",
+            "joke": "My grandfather says I'm too reliant on technology.\nI called him a hypocrite and unplugged his life support.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 178,
+            "safe": false,
+            "lang": "en"
+        },
+        {
+            "category": "Dark",
+            "type": "single",
+            "joke": "I'll never forget my Granddad's last words to me just before he died. \"Are you still holding the ladder?\"",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 208,
+            "safe": false,
+            "lang": "en"
+        },
+        {
+            "category": "Dark",
+            "type": "single",
+            "joke": "I have a fish that can breakdance! Only for 20 seconds though, and only once.",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "id": 237,
+            "safe": false,
+            "lang": "en"
+        },
+        {
+            "category": "Dark",
+            "type": "single",
+            "joke": "My girlfriend's dog died, so I tried to cheer her up by getting her an identical one. It just made her more upset. She screamed at me, \"What am I supposed to do with two dead dogs?\"",
+            "flags": {
+                "nsfw": false,
+                "religious": false,
+                "political": false,
+                "racist": false,
+                "sexist": false,
+                "explicit": false
+            },
+            "safe": false,
+            "id": 275,
+            "lang": "en"
+        }
+    ]
+
+    function jokes() {
+        console.log("hi ")
+        let rand = Math.floor((Math.random() * 100) % 10)
+        joke.innerHTML = `${array[rand].joke}`
+    }
+    btn.addEventListener('click',jokes)
+</script>
+
+</html>
